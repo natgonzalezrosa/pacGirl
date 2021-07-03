@@ -2,6 +2,7 @@ const width = 28
 const grid = document.querySelector('.grid')
 const scoreDisplay = document.getElementById('score')
 let squares = []
+let score = 0
 
 // 0 - pacdots
 // 1 - wall
@@ -103,6 +104,9 @@ function control(e) {
             pacmanCurrentIndex % width !==0
             ) 
             pacmanCurrentIndex -=1
+            if (pacmanCurrentIndex === 364) {
+                pacmanCurrentIndex = 391
+            }
         break
         case 39:
         console.log('pressed right')
@@ -112,8 +116,21 @@ function control(e) {
             pacmanCurrentIndex % width < width -1
             ) 
             pacmanCurrentIndex +=1
+            if (pacmanCurrentIndex === 391) {
+                pacmanCurrentIndex = 364
+            }
         break
     }
     squares[pacmanCurrentIndex].classList.add('pacman')
+    pacDotEaten()
 }
 document.addEventListener('keyup', control)
+
+
+function pacDotEaten() {
+    if (squares[pacmanCurrentIndex].classList.contains('pac-dot')) {
+        squares[pacmanCurrentIndex].classList.remove('pac-dot')
+        score++
+        scoreDisplay.innerHTML = score
+    }
+}
