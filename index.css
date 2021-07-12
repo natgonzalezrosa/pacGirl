@@ -9,6 +9,7 @@ html, body {
     width: 420px;
     height: 420px;
     border: solid black;
+    background: #ddd5f3;
 }
 
 .grid div {
@@ -17,47 +18,47 @@ html, body {
 }
 
 .pac-dot {
-    background-color: green;
-    border: 5px solid white;
+    background-color: #630063;
+    border: 5px solid #ddd5f3;
     box-sizing: border-box;
 }
 
 .wall {
-    background-color: blue;
+    background-color:#630063;
 }
 
 .power-pellet {
-    background-color: green;
-    border-radius: 7.5px;
+    background-image: url("images/cherries.png");
+    background-size: 100%;
 }
 
 .pacman {
-    background-color: orange;
-    border-radius: 7.5px;
-    border: none;
+    background-image: url("images/pacman.png");
+    background-size: 100%;
 }
 
 .blinky {
-    background-color: red;
-    border: none;
+    background-image: url("images/blinky.png");
+    background-size: 100%;
+
 }
 
 .pinky {
-    background-color: pink;
-    border: none;
+    background-image: url("images/pinky.png");
+    background-size: 100%;
 }
 
 .inky {
-    background-color: aqua;
-    border: none;
+    background-image: url("images/inky.png");
+    background-size: 100%;
 }
 
 .clyde {
-    background-color: orange;
-    border: none;
+    background-image: url("images/clyde.png");
+    background-size: 100%;
 }
 
 .scared-ghost {
-    background-color: aquamarine;
-    border: none;
+    background-image: url("images/scared-ghost.png");
+    background-size: 100%;
 }
